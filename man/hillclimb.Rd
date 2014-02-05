@@ -9,10 +9,11 @@ http://www.santafe.edu/media/workingpapers/96-08-065.pdf
 Profit maxima are normalized and multiplied by 100 in output for readability.
 }
 \usage{
-hillclimb(budget, inputs, connections = 1, 
-  iterations = 1, coeffs.upper = 1, coeffs.lower = -1)
+hillclimb = function(budget, inputs, connections=1, 
+  iterations=1, coeffs.upper=1, coeffs.lower=-1, 
+    coeffs.upper.square = 1, coeffs.lower.square = -1, 
+      coeffs.upper.cross=1, coeffs.lower.cross=-1)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{budget}{
 The total budget a simulated firm has to allocate to its range of inputs: must be an integer in [0, inf)
@@ -30,7 +31,19 @@ The number times the simulation is run: must be an integer in [1,inf); default, 
 The upper bound of randomly assigned coefficients for terms in the profit function: must be greater than coeffs.lower; default, coeffs.upper = 1
 }
   \item{coeffs.lower}{
-The lower bound of randomly assigned coefficients for terms in the profit function: must be less than coeffs.upper; default, coeffs.upper = 1
+The lower bound of randomly assigned coefficients for terms in the profit function: must be less than coeffs.upper; default, coeffs.lower = -1
+}
+  \item{coeffs.upper.square}{
+The upper bound of randomly assigned coefficients for square terms in the profit function: must be greater than coeffs.lower; default, coeffs.upper.square = 1
+}
+  \item{coeffs.lower.square}{
+The lower bound of randomly assigned coefficients for square terms in the profit function: must be less than coeffs.upper; default, coeffs.lower.square = -1
+}
+  \item{coeffs.upper.cross}{
+The upper bound of randomly assigned coefficients for cross product terms in the profit function: must be greater than coeffs.lower; default, coeffs.upper.cross = 1
+}
+  \item{coeffs.lower.cross}{
+The lower bound of randomly assigned coefficients for cross product terms in the profit function: must be less than coeffs.upper; default, coeffs.lower.cross = -1
 }
 }
 
@@ -50,13 +63,8 @@ http://www.santafe.edu/media/workingpapers/96-08-065.pdf
 ## Simple Example
 hillclimb(budget = 50, inputs = 20, connections = 3, iterations = 2, coeffs.upper = 1, coeffs.lower = -1)
 
-## Example to replicate ideas in 1996 Kane's paper
-##### WARNING #######
-# Below example takes significant computing power and time to complete
-hillclimb(budget = 50, inputs = 20, connections = 1:5, iterations = 1000)
-
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
+
+\keyword{function}
 \keyword{hclimb}
-\keyword{hillclimb}% __ONLY ONE__ keyword per line
+\keyword{hillclimb}
