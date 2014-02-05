@@ -1,4 +1,4 @@
-hillclimb = function(budget, inputs, connections=1, iterations=1, coeffs.upper=1, coeffs.lower=-1){
+hillclimb = function(budget, inputs, connections=1, iterations=1, coeffs.upper=1, coeffs.lower=-1, coeffs.upper.square = 1, coeffs.lower.square = -1, coeffs.upper.cross=1, coeffs.lower.cross=-1){
   connections1 = connections
   # Error Messages for impossible inputs
   if(max(connections1)>inputs){
@@ -103,7 +103,7 @@ hillclimb = function(budget, inputs, connections=1, iterations=1, coeffs.upper=1
       profitFun[z,] = c(xi.i[z,], xisqr, xixj)
     }
     if(c == 1){
-    coeffs=runif(ncol(profitFun), coeffs.lower, coeffs.upper)
+      coeffs=c(runif(inputs, coeffs.lower, coeffs.upper), runif(inputs, coeffs.lower.square, coeffs.upper.square), runif((ncol(profitFun)-(2*inputs)), coeffs.lower.cross, coeffs.upper.cross))
     }
     profit = rep(NA, nrow(profitFun))
     for(z in 1:nrow(profitFun)){
