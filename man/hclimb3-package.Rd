@@ -31,5 +31,5 @@ http://www.santafe.edu/media/workingpapers/96-08-065.pdf
 \keyword{ package }
 
 \examples{
-hillclimg(50, 20)
+hillclimb(50, 20)
 }
