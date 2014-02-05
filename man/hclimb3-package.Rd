@@ -6,8 +6,10 @@
 hclimb: Local Hillclimbing on Economic Landscape
 }
 \description{
-More about what it does (maybe more than one line)
-~~ A concise (1-5 lines) description of the package ~~
+Replicating the ideas of David Kane's 1996 paper, hclimb simulates a profit landscape through the hillclimb function.
+hillclimb() then surveys potential moves for a firm given a random budget allocation and moves in the direction of profit that aligns with one of three firm strategies:
+steepest ascent, median ascent, or least ascent (in terms of profit movement).
+See References for more information
 }
 \details{
 \tabular{ll}{
@@ -24,6 +26,7 @@ Bryan Jones bryan.c.jones@williams.edu
 
 }
 \references{
+http://www.santafe.edu/media/workingpapers/96-08-065.pdf
 }
 \keyword{ package }
 
