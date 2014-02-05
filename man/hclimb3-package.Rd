@@ -3,8 +3,7 @@
 \alias{hclimb3}
 \docType{package}
 \title{
-What the package does (short line)
-~~ package title ~~
+hclimb: Local Hillclimbing on Economic Landscape
 }
 \description{
 More about what it does (maybe more than one line)
@@ -16,24 +15,18 @@ Package: \tab hclimb3\cr
 Type: \tab Package\cr
 Version: \tab 1.0\cr
 Date: \tab 2014-02-03\cr
-License: \tab What license is it under?\cr
+License: GPL-2
 }
-~~ An overview of how to use the package, including the most important functions ~~
+
 }
 \author{
-Who wrote it
+Bryan Jones bryan.c.jones@williams.edu
 
-Maintainer: Who to complain to <yourfault@somewhere.net>
-~~ The author and/or maintainer of the package ~~
 }
 \references{
-~~ Literature or other references for background information ~~
 }
 \keyword{ package }
-\seealso{
-~~ Optional links to other man pages, e.g. ~~
-~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
-}
+
 \examples{
-~~ simple examples of the most important functions ~~
+hillclimg(50, 20)
 }
